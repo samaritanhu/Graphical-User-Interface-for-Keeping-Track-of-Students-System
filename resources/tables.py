@@ -1,0 +1,24 @@
+TABLE_STU = """
+CREATE TABLE IF NOT EXISTS `students` (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+student_name VARCHAR(200) NOT NULL,
+student_id BIGINT NOT NULL UNIQUE
+);
+"""
+
+TABLE_COURSE = """
+CREATE TABLE IF NOT EXISTS `courses` (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+course_id BIGINT UNIQUE NOT NULL,
+course_name VARCHAR(200) NOT NULL,
+course_time TIME NOT NULL,
+course_week INT NOT NULL
+);
+"""
+
+STU_TABLE_COURSE = """
+CREATE TABLE IF NOT EXISTS `student_course` (
+student_id INT NOT NULL,
+course_id BIGINT NOT NULL
+);
+"""
